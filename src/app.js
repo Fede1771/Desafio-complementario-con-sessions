@@ -30,12 +30,11 @@ app.use(session({
         mongoUrl: "mongodb+srv://federicoburgos98:CoderProyecto2024*@cluster0.npfabrc.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0", ttl: 100
     })
 }))
-////////////////////////////////////////////////////////
-//Cambios passport: 
+
 initializePassport();
 app.use(passport.initialize());
 app.use(passport.session());
-///////////////////////////////////////////////////////////
+
 
 app.use("/api/users", userRouter);
 app.use("/api/sessions", sessionRouter);
