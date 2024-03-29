@@ -1,64 +1,91 @@
-/* Estilos CSS para el encabezado personalizado */
+/* Estilos para el encabezado personalizado */
 .custom-header {
-    background-color: #333; /* Color de fondo del encabezado */
-    color: white; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno del encabezado */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Alinear los elementos a los extremos */
-    align-items: center; /* Alinear los elementos verticalmente */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .custom-header .logo {
-    text-decoration: none; /* Quitar subrayado del enlace */
-    color: white; /* Color del texto del logo */
-    font-size: 1.5em; /* Tamaño de la fuente del logo */
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
 }
 
 .custom-header nav ul {
-    list-style-type: none; /* Quitar viñetas de la lista */
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 .custom-header nav ul li {
-    display: inline; /* Mostrar los elementos de la lista en línea */
-    margin-left: 20px; /* Espaciado entre elementos de la lista */
+    display: inline;
+    margin-left: 20px;
 }
 
 .custom-header nav ul li a {
-    text-decoration: none; /* Quitar subrayado del enlace */
-    color: white; /* Color del texto del enlace */
-    font-weight: bold; /* Establecer negrita */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-.custom-header .register-link {
-    padding: 10px 20px; /* Espaciado interno del enlace */
-    background-color: #0d999e; /* Color de fondo del enlace */
-    border-radius: 5px; /* Borde redondeado */
-    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón sobre el enlace */
-}
+.custom-header .register-link,
 .custom-header .login-link {
-    padding: 10px 20px; /* Espaciado interno del enlace */
-    background-color: #0d999e; /* Color de fondo del enlace */
-    border-radius: 5px; /* Borde redondeado */
-    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón sobre el enlace */
+    padding: 10px 20px;
+    background-color: #0d999e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-
-.custom-header .register-link:hover {
-    background-color: #2a00c4; /* Cambio de color de fondo al pasar el ratón sobre el enlace */
-}
+.custom-header .register-link:hover,
 .custom-header .login-link:hover {
-    background-color: #2a00c4; /* Cambio de color de fondo al pasar el ratón sobre el enlace */
+    background-color: #2a00c4;
 }
 
-/* Estilos CSS para el formulario de inicio de sesión */
+/* Estilos CSS para el contenido */
+.profile-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.profile-container h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.profile-container p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #666;
+}
+
+.profile-container a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.profile-container a:hover {
+    color: #004085;
+}
+
+
+/* Estilos para el formulario de inicio de sesión */
 .login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Esto asegura que el contenedor ocupe el 100% del alto de la pantalla */
+    height: 100vh;
 }
 
 .login-container h1,
@@ -68,15 +95,15 @@
 }
 
 .login-container h1 {
-    font-size: 25px; /* Tamaño de fuente para el título "Login" */
+    font-size: 25px;
 }
 
 .login-container form {
-    width: 350px; /* Ajusta el ancho del formulario según sea necesario */
+    width: 350px;
     padding: 25px;
     background-color: #f2f2f2;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra al formulario para resaltarlo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .login-container form label {
@@ -84,24 +111,15 @@
     font-weight: bold;
 }
 
-.login-container form input[type="email"] {
-    width: 100%; 
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    font-size: 15px; 
-    box-sizing: content-box;
-}
-
+.login-container form input[type="email"],
 .login-container form input[type="password"] {
-    width: 100%; 
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 15px;
     border: 1px solid #ccc;
-    font-size: 15px; 
-    box-sizing: content-box; 
+    font-size: 15px;
+    box-sizing: content-box;
 }
 
 .login-container form button[type="submit"] {
@@ -126,15 +144,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Esto asegura que el contenedor ocupe el 100% del alto de la pantalla */
+    height: 100vh;
 }
 
 .register-container form {
-    width: 350px; /* Ajusta el ancho del formulario según sea necesario */
+    width: 350px;
     padding: 25px;
     background-color: #f2f2f2;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra al formulario para resaltarlo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .register-container form label {
@@ -153,7 +171,7 @@
     border-radius: 15px;
     border: 1px solid #ccc;
     font-size: 15px;
-    box-sizing: border-box; /* Usar box-sizing:border-box para incluir padding y borde en el ancho total */
+    box-sizing: border-box;
 }
 
 .register-container form button[type="submit"] {
@@ -161,14 +179,13 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background-color: #000dc4;
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background-color: #000dc4;
 }
 
 .register-container form button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #000dc4;
 }
