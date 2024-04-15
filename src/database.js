@@ -1,5 +1,26 @@
 const mongoose = require("mongoose");
+const configObject = require("./config/config.js");
+const {mongo_url} = configObject;
 
-mongoose.connect("mongodb+srv://federicoburgos98:CoderProyecto2024*@cluster0.npfabrc.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0")
-.then(() => console.log("Conexion Exitosa"))
-.catch(() => console.log("Conexion Fallida"))
+
+class BaseDatos {
+    static #instancia;
+
+    constructor() {
+        mongoose.connect(mongo_url);
+    }
+
+    static getInstancia(){
+        if(this.#instancia) {
+            console.log("Conexión previa");
+            return this.#instancia;
+        }
+
+        this.#instancia = new BaseDatos();
+        console.log("Conexión exitosa");
+        return this.#instancia;
+    }
+}
+
+module.exports = BaseDatos.getInstancia();
+
